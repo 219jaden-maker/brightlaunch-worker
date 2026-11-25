@@ -62,7 +62,7 @@ export default {
       { id: "car-home", name: "Car & Home Essentials Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=600&fit=crop" }
     ];
 
-    const cards = products.map(p => `
+    const card = p => `
       <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06)">
         <img src="${p.img}" alt="${p.name}" style="width:100%;height:180px;object-fit:cover">
         <div style="padding:14px">
@@ -70,77 +70,77 @@ export default {
           <p style="color:#059669;font-weight:700;font-size:1.2rem;margin:6px 0">$${p.price}</p>
           <a href="https://payhip.com/BrightLaunchTemplateCo" style="background:#f59e0b;color:white;padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600">View Kit</a>
         </div>
-      </div>
-    `).join("");
+      </div>`;
 
     const header = `
       <header style="background:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee">
         <div style="font-weight:800;font-size:1.6rem;color:#f59e0b">BrightLaunch</div>
         <nav>
           <a href="/" style="margin-left:18px;text-decoration:none;color:#333">Shop</a>
+          <a href="/bundles" style="margin-left:18px;text-decoration:none;color:#333">Bundles</a>
           <a href="/articles" style="margin-left:18px;text-decoration:none;color:#333">Articles</a>
           <a href="/reviews" style="margin-left:18px;text-decoration:none;color:#333">Reviews</a>
           <a href="/about" style="margin-left:18px;text-decoration:none;color:#333">About</a>
         </nav>
       </header>
-      <div style="background:#2563eb;color:#fff;text-align:center;padding:12px;font-weight:600">Instant Digital Downloads • Print at Home • Practical Kits for Real Life</div>
-    `;
+      <div style="background:#2563eb;color:#fff;text-align:center;padding:12px;font-weight:600">Instant Digital Downloads • Print at Home • Practical Kits for Real Life</div>`;
 
     const footer = `
       <footer style="background:#fff;padding:32px 24px;text-align:center;color:#6b7280;border-top:1px solid #eee;margin-top:40px">
         <p>BrightLaunch Template Co.</p>
         <p>Phone: 219.365.4088 • Text: 219.213.1379</p>
-        <p>Signs OverNITE: <a href="https://signsovernite.com">signsovernite.com</a></p>
-        <p>Also visit: <a href="https://chromeautoshop.com">chromeautoshop.com</a> • <a href="https://prosportstickers.com">prosportstickers.com</a> • <a href="https://thestickerboy.com">thestickerboy.com</a></p>
-      </footer>
-    `;
+        <p><a href="https://signsovernite.com">Signs OverNITE</a> • <a href="https://chromeautoshop.com">chromeautoshop.com</a> • <a href="https://prosportstickers.com">prosportstickers.com</a> • <a href="https://thestickerboy.com">thestickerboy.com</a></p>
+      </footer>`;
+
+    const wrap = (title, body) => `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title} – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`;
 
     if (path === "/" || path === "/shop") {
-      const body = `
-        <div style="max-width:1200px;margin:0 auto;padding:32px 20px">
-          <div style="background:#fffbeb;padding:24px;border-radius:12px;margin-bottom:32px">
-            <h2>Our Mission</h2>
-            <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
-          </div>
-          <h1>Practical Printable Kits</h1>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">${cards}</div>
+      const body = `<div style="max-width:1200px;margin:0 auto;padding:32px 20px">
+        <div style="background:#fffbeb;padding:24px;border-radius:12px;margin-bottom:32px">
+          <h2>Our Mission</h2>
+          <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
         </div>
-      `;
-      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+        <h1>Practical Printable Kits</h1>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">${products.map(card).join("")}</div>
+      </div>`;
+      return new Response(wrap("Shop", body), { headers: { "Content-Type": "text/html" } });
+    }
+
+    if (path === "/bundles") {
+      const body = `<div style="max-width:1200px;margin:0 auto;padding:32px 20px">
+        <h1>$49 Bundles</h1>
+        <p>Each bundle includes 5 kits.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">${products.filter(p => p.price === 49).map(card).join("")}</div>
+      </div>`;
+      return new Response(wrap("Bundles", body), { headers: { "Content-Type": "text/html" } });
     }
 
     if (path === "/articles") {
-      const body = `
-        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
-          <h1>Articles & Guides</h1>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>How to Get Kids to Love Reading</h3><p>Simple systems that turn reading into an adventure.</p></div>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Family Emergency Prep Checklist</h3><p>What every household needs ready before an emergency.</p></div>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Cut Your Grocery Bill This Month</h3><p>Practical meal planning tricks that work.</p></div>
-        </div>
-      `;
-      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Articles – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+      const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px">
+        <h1>Articles & Guides</h1>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>How to Get Kids to Love Reading</h3><p>Simple systems that turn reading into an adventure.</p></div>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Family Emergency Prep Checklist</h3><p>What every household needs ready before an emergency.</p></div>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Cut Your Grocery Bill This Month</h3><p>Practical meal planning tricks that work.</p></div>
+      </div>`;
+      return new Response(wrap("Articles", body), { headers: { "Content-Type": "text/html" } });
     }
 
     if (path === "/reviews") {
-      const body = `
-        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
-          <h1>Customer Reviews</h1>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “My kids actually ask to do their reading log now.” — Sarah M.</p></div>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Finally got our whole family on the same page.” — Mike T.</p></div>
-          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Saved me when I needed to file a claim.” — Jennifer L.</p></div>
-        </div>
-      `;
-      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Reviews – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+      const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px">
+        <h1>Customer Reviews</h1>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “My kids actually ask to do their reading log now.” — Sarah M.</p></div>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Finally got our whole family on the same page.” — Mike T.</p></div>
+        <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Saved me when I needed to file a claim.” — Jennifer L.</p></div>
+      </div>`;
+      return new Response(wrap("Reviews", body), { headers: { "Content-Type": "text/html" } });
     }
 
     if (path === "/about") {
-      const body = `
-        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
-          <h1>About BrightLaunch</h1>
-          <p>BrightLaunch makes practical printable kits for everyday life. Each kit is built to be used, not just looked at.</p>
-        </div>
-      `;
-      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>About – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+      const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px">
+        <h1>About BrightLaunch</h1>
+        <p>BrightLaunch makes practical printable kits for everyday life. Each kit is built to be used, not just looked at.</p>
+      </div>`;
+      return new Response(wrap("About", body), { headers: { "Content-Type": "text/html" } });
     }
 
     return new Response("Not found", { status: 404 });
