@@ -1,6 +1,4 @@
-{
-  "name": "brightlaunch",
-  "main": "src/index.js",
-  "compatibility_date": "2026-11-25",
-  "workers_dev": true
-}
+name = "brightlaunch"
+main = "src/index.js"
+compatibility_date = "2026-11-25"
+workers_dev = true
