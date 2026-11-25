@@ -1,5 +1,8 @@
 export default {
-  async fetch() {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const path = url.pathname;
+
     const products = [
       { id: "kids-reading", name: "Kids Reading Adventure Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop" },
       { id: "emergency-prep", name: "Emergency Preparedness & Family Safety Planner", price: 19.00, img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=600&fit=crop" },
@@ -63,48 +66,83 @@ export default {
       <div style="background:white;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06)">
         <img src="${p.img}" alt="${p.name}" style="width:100%;height:180px;object-fit:cover">
         <div style="padding:14px">
-          <h3 style="margin:0 0 6px;font-size:1rem;line-height:1.3">${p.name}</h3>
+          <h3 style="margin:0 0 6px;font-size:1rem">${p.name}</h3>
           <p style="color:#059669;font-weight:700;font-size:1.2rem;margin:6px 0">$${p.price}</p>
-          <a href="https://payhip.com/BrightLaunchTemplateCo" style="background:#f59e0b;color:white;padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem">View Kit</a>
+          <a href="https://payhip.com/BrightLaunchTemplateCo" style="background:#f59e0b;color:white;padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600">View Kit</a>
         </div>
       </div>
     `).join("");
 
-    const html = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BrightLaunch – Practical Printable Kits</title>
-<meta name="description" content="Instant download printable kits, planners, checklists and trackers for families, homeowners and small businesses.">
-<style>
-body{font-family:system-ui,sans-serif;margin:0;background:#f7f8fa;color:#1a1a1a}
-header{background:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}
-.logo{font-weight:800;font-size:1.6rem;color:#f59e0b}
-nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:500}
-.banner{background:#2563eb;color:#fff;text-align:center;padding:12px;font-weight:600}
-.container{max-width:1200px;margin:0 auto;padding:32px 20px}
-.mission{background:#fffbeb;padding:24px;border-radius:12px;margin-bottom:32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo">BrightLaunch</div>
-  <nav><a href="/">Shop</a><a href="/about">About</a></nav>
-</header>
-<div class="banner">Instant Digital Downloads • Print at Home • Practical Kits for Real Life</div>
-<div class="container">
-  <div class="mission">
-    <h2>Our Mission</h2>
-    <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
-  </div>
-  <h1>Practical Printable Kits</h1>
-  <div class="grid">${cards}</div>
-</div>
-</body>
-</html>`;
+    const header = `
+      <header style="background:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee">
+        <div style="font-weight:800;font-size:1.6rem;color:#f59e0b">BrightLaunch</div>
+        <nav>
+          <a href="/" style="margin-left:18px;text-decoration:none;color:#333">Shop</a>
+          <a href="/articles" style="margin-left:18px;text-decoration:none;color:#333">Articles</a>
+          <a href="/reviews" style="margin-left:18px;text-decoration:none;color:#333">Reviews</a>
+          <a href="/about" style="margin-left:18px;text-decoration:none;color:#333">About</a>
+        </nav>
+      </header>
+      <div style="background:#2563eb;color:#fff;text-align:center;padding:12px;font-weight:600">Instant Digital Downloads • Print at Home • Practical Kits for Real Life</div>
+    `;
 
-    return new Response(html, { headers: { "Content-Type": "text/html" } });
+    const footer = `
+      <footer style="background:#fff;padding:32px 24px;text-align:center;color:#6b7280;border-top:1px solid #eee;margin-top:40px">
+        <p>BrightLaunch Template Co.</p>
+        <p>Phone: 219.365.4088 • Text: 219.213.1379</p>
+        <p>Signs OverNITE: <a href="https://signsovernite.com">signsovernite.com</a></p>
+        <p>Also visit: <a href="https://chromeautoshop.com">chromeautoshop.com</a> • <a href="https://prosportstickers.com">prosportstickers.com</a> • <a href="https://thestickerboy.com">thestickerboy.com</a></p>
+      </footer>
+    `;
+
+    if (path === "/" || path === "/shop") {
+      const body = `
+        <div style="max-width:1200px;margin:0 auto;padding:32px 20px">
+          <div style="background:#fffbeb;padding:24px;border-radius:12px;margin-bottom:32px">
+            <h2>Our Mission</h2>
+            <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
+          </div>
+          <h1>Practical Printable Kits</h1>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px">${cards}</div>
+        </div>
+      `;
+      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+    }
+
+    if (path === "/articles") {
+      const body = `
+        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
+          <h1>Articles & Guides</h1>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>How to Get Kids to Love Reading</h3><p>Simple systems that turn reading into an adventure.</p></div>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Family Emergency Prep Checklist</h3><p>What every household needs ready before an emergency.</p></div>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><h3>Cut Your Grocery Bill This Month</h3><p>Practical meal planning tricks that work.</p></div>
+        </div>
+      `;
+      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Articles – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+    }
+
+    if (path === "/reviews") {
+      const body = `
+        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
+          <h1>Customer Reviews</h1>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “My kids actually ask to do their reading log now.” — Sarah M.</p></div>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Finally got our whole family on the same page.” — Mike T.</p></div>
+          <div style="background:white;padding:20px;border-radius:12px;margin-bottom:16px"><p>★★★★★ “Saved me when I needed to file a claim.” — Jennifer L.</p></div>
+        </div>
+      `;
+      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Reviews – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+    }
+
+    if (path === "/about") {
+      const body = `
+        <div style="max-width:900px;margin:0 auto;padding:32px 20px">
+          <h1>About BrightLaunch</h1>
+          <p>BrightLaunch makes practical printable kits for everyday life. Each kit is built to be used, not just looked at.</p>
+        </div>
+      `;
+      return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>About – BrightLaunch</title></head><body style="margin:0;font-family:system-ui,sans-serif;background:#f7f8fa">${header}${body}${footer}</body></html>`, { headers: { "Content-Type": "text/html" } });
+    }
+
+    return new Response("Not found", { status: 404 });
   }
 };
