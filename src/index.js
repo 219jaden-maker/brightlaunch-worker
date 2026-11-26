@@ -171,8 +171,10 @@ export default {
     if (path === "/about") {
       const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px">
         <h1>About BrightLaunch</h1>
-        <p>BrightLaunch makes practical printable kits for everyday life. Each kit is built to be used, not just looked at.</p>
-        <p>BrightLaunch is part of Signs OverNITE, a family-owned business based in Crown Point, Indiana.</p>
+        <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers, and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
+        <p>We are the team behind a local sign business that has served customers for more than 50 years. Decades of making signs for shops, events, homes, and vehicles taught us what gets noticed and what gets results. That experience goes into every guide, checklist, and planner we make.</p>
+        <p>Every product is an instant digital download in standard US Letter size, so you can print at home or at any print shop. Our kits include clear worksheets and companion files you can use on your computer or print as many times as you need.</p>
+        <p>BrightLaunch is part of Signs OverNITE, a family-owned business based in Crown Point, Indiana, serving Northwest Indiana and the greater Chicagoland area.</p>
         <p><strong>Contact us:</strong><br>Phone: 219.365.4088<br>Text: 219.213.1379<br>Email: info@signsovernite.com</p>
       </div>`;
       return new Response(wrap("About", body), { headers: { "Content-Type": "text/html" } });
@@ -181,7 +183,15 @@ export default {
     if (path === "/contact") {
       const body = `<div style="max-width:800px;margin:0 auto;padding:32px 20px">
         <h1>Contact Us</h1>
-        <p>Phone: 219.365.4088 • Text: 219.213.1379<br>Email: info@signsovernite.com<br>Address: 8304 S Cline Ave, Crown Point, IN</p>
+        <p>Have a question about a kit or need help with an order? Reach out and we’ll get back to you.</p>
+        <div style="background:white;padding:24px;border-radius:12px;margin-top:20px">
+          <p><strong>BrightLaunch Template Co. / Signs OverNITE</strong></p>
+          <p>Phone: 219.365.4088</p>
+          <p>Text: 219.213.1379</p>
+          <p>Email: info@signsovernite.com</p>
+          <p>Address: 8304 S Cline Ave, Crown Point, IN</p>
+        </div>
+        <p style="margin-top:20px">We typically respond within one business day.</p>
       </div>`;
       return new Response(wrap("Contact", body), { headers: { "Content-Type": "text/html" } });
     }
