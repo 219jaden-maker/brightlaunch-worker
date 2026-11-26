@@ -4,7 +4,7 @@ export default {
     const path = url.pathname;
 
     const products = [
-      { id: "kids-reading", name: "Kids Reading Adventure Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop", desc: "Turn reading time into a fun adventure! Includes a Reading Log, Book Review Worksheets, New Words Tracker, Reading Goals Planner, Story Characters Tracker, and Reading Rewards Tracker. Perfect for parents, homeschool families, teachers, and young book lovers. Instant digital download — open the HTML workbook in your browser to print or save as a PDF." },
+      { id: "kids-reading", name: "Kids Reading Adventure Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop", desc: "Turn reading time into a fun adventure! Includes a Reading Log, Book Review Worksheets, New Words Tracker, Reading Goals Planner, Story Characters Tracker, and Reading Rewards Tracker. Perfect for parents, homeschool families, teachers, and young book lovers. Instant digital download." },
       { id: "emergency-prep", name: "Emergency Preparedness & Family Safety Planner", price: 19.00, img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=600&fit=crop", desc: "Get your family ready before an emergency happens. Includes Emergency Contact List, Evacuation Plan Worksheet, Supply Checklist, Important Documents Tracker, Family Communication Plan, and Meeting Point Planner. Instant digital download." },
       { id: "home-warranty", name: "Home Inventory & Warranty Tracker", price: 19.00, img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&h=600&fit=crop", desc: "Never lose track of what you own or miss a warranty claim. Includes Home Inventory List, Warranty Tracker, Purchase Date & Receipt Log, Appliance Maintenance Notes, and Insurance Claim Summary Sheet. Instant digital download." },
       { id: "home-insurance", name: "Home Inventory & Insurance Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=600&fit=crop", desc: "Complete inventory list plus insurance summary sheets so you're ready for any claim. Instant digital download." },
@@ -35,7 +35,7 @@ export default {
       { id: "home-business", name: "Start a Home Business Kit", price: 19.00, img: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=600&fit=crop", desc: "Step-by-step planner and checklists for starting a business from home. Instant digital download." },
       { id: "make-friends", name: "Meet People & Make New Friends Kit", price: 19.00, img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=600&fit=crop", desc: "Ideas and trackers for meeting new people and building friendships. Instant digital download." },
       { id: "wellbeing", name: "Positive Attitude & Everyday Wellbeing Kit", price: 19.00, img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600&fit=crop", desc: "Daily wellbeing trackers and positive habit worksheets. Instant digital download." },
-      { id: "college-prep", name: "College Prep & Success Kit", price: 19.00, img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=600&fit=crop", desc: "Checklists and planners for college applications and student success. Instant digital download." },
+      { id: "college-prep", name: "College Prep & Success Kit", price: 19.00, img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=600&fit=crop", desc: "Checklists and planners for college applications and student success. Instant digital download." },
       { id: "biz-startup", name: "Small Business Startup Planner", price: 19.00, img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=600&fit=crop", desc: "Complete startup checklist and planning worksheets. Instant digital download." },
       { id: "wedding-signs", name: "Wedding Welcome & Party Sign Kit", price: 19.00, img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=600&fit=crop", desc: "Editable sign templates for weddings and parties. Instant digital download." },
       { id: "yard-sale", name: "Yard Sale & Garage Sale Sign Kit", price: 19.00, img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=600&fit=crop", desc: "Ready-to-print yard sale signs and pricing tags. Instant digital download." },
@@ -74,10 +74,7 @@ export default {
 
     const header = `
       <header style="background:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee">
-        <div style="display:flex;align-items:center;gap:10px">
-          <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k7qku2q51n0v1c5o1v5bpf216hah.png" alt="BrightLaunch" style="height:48px">
-          <span style="font-weight:800;font-size:1.6rem;color:#f59e0b">BrightLaunch</span>
-        </div>
+        <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1k7qku2q51n0v1c5o1v5bpf216hah.png" alt="BrightLaunch" style="height:52px">
         <nav>
           <a href="/" style="margin-left:18px;text-decoration:none;color:#333">Shop</a>
           <a href="/bundles" style="margin-left:18px;text-decoration:none;color:#333">Bundles</a>
