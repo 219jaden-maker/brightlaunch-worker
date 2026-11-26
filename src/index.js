@@ -664,12 +664,84 @@ Perfect for new business grand openings.
 Instant digital download.
 Created by BrightLaunch.
 Digital product only. No physical item will be shipped.` },
-      { id: "independent-living", name: "Independent Living Starter Pack", price: 49.00, img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=600&fit=crop", desc: `Bundle of 5 practical kits for independent living. Instant digital download. Created by BrightLaunch.` },
-      { id: "online-biz-ai", name: "Online Business & AI Success", price: 49.00, img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for online business and AI tools. Instant digital download. Created by BrightLaunch.` },
-      { id: "smart-living", name: "Smart Living & Money Saving", price: 49.00, img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for smarter living and saving money. Instant digital download. Created by BrightLaunch.` },
-      { id: "better-life", name: "Better Life & Personal Success Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for personal growth and better living. Instant digital download. Created by BrightLaunch.` },
-      { id: "business-success", name: "Business Success Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for business growth. Instant digital download. Created by BrightLaunch.` },
-      { id: "car-home", name: "Car & Home Essentials Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for car and home care. Instant digital download. Created by BrightLaunch.` }
+      { id: "independent-living", name: "Independent Living Starter Pack", price: 49.00, img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=600&fit=crop", desc: `Bundle of 5 practical kits for independent living.
+
+What's included:
+• First Apartment & Moving Out Kit
+• Household Budget & Bill Payment Planner
+• Personal Documents & Emergency Contacts Organizer
+• Home Maintenance & Repair Log
+• Family Fun on a Budget
+
+Perfect for anyone starting out on their own.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "online-biz-ai", name: "Online Business & AI Success", price: 49.00, img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for online business and AI tools.
+
+What's included:
+• Starting an Online Store
+• AI Tools for Beginners
+• Small Business Marketing
+• Social Media Business Kit
+• Small Business Startup Planner
+
+Perfect for anyone launching an online business.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "smart-living", name: "Smart Living & Money Saving", price: 49.00, img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for smarter living and saving money.
+
+What's included:
+• Household Budget & Bill Payment Planner
+• Save Money & Cut Household Bills Kit
+• Meal Planning & Grocery Savings Kit
+• Home Organization & Decluttering
+• Time Management & Productivity
+
+Perfect for households focused on saving money and getting organized.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "better-life", name: "Better Life & Personal Success Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for personal growth and better living.
+
+What's included:
+• Positive Attitude & Everyday Wellbeing Kit
+• Win Friends & Build Positive Influence Kit
+• Meet People & Make New Friends Kit
+• Time Management & Productivity
+• Income Growth & Financial Goals Kit
+
+Perfect for anyone focused on personal growth.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "business-success", name: "Business Success Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for business growth.
+
+What's included:
+• Small Business Startup Planner
+• Small Business Marketing
+• Starting an Online Store
+• Social Media Business Kit
+• Grand Opening Marketing Kit
+
+Perfect for small business owners.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "car-home", name: "Car & Home Essentials Bundle", price: 49.00, img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=600&fit=crop", desc: `Bundle of 5 kits for car and home care.
+
+What's included:
+• Gas Car Care & Maintenance Kit
+• Electric Car Care & Maintenance Kit
+• Home Inventory & Warranty Tracker
+• Seasonal Home Maintenance & Repair Log
+• Ultimate Home Gardening Kit
+
+Perfect for homeowners and car owners.
+Instant digital download. Each kit is a printable workbook with companion files.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` }
     ];
 
     const card = p => `
@@ -691,6 +763,7 @@ Digital product only. No physical item will be shipped.` },
           <a href="/articles" style="margin-left:18px;text-decoration:none;color:#333">Articles</a>
           <a href="/reviews" style="margin-left:18px;text-decoration:none;color:#333">Reviews</a>
           <a href="/about" style="margin-left:18px;text-decoration:none;color:#333">About</a>
+          <a href="/contact" style="margin-left:18px;text-decoration:none;color:#333">Contact</a>
         </nav>
       </header>
       <div style="background:#2563eb;color:#fff;text-align:center;padding:12px;font-weight:600">Instant Digital Downloads • Print at Home • Practical Kits for Real Life</div>`;
@@ -764,10 +837,31 @@ Digital product only. No physical item will be shipped.` },
     }
 
     if (path === "/about") {
-      const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px"><h1>About BrightLaunch</h1>
-        <p>BrightLaunch makes practical printable kits for everyday life. Each kit is built to be used, not just looked at.</p>
+      const body = `<div style="max-width:900px;margin:0 auto;padding:32px 20px">
+        <h1>About BrightLaunch</h1>
+        <p>BrightLaunch makes practical printable kits for everyday life: planners, checklists, trackers, and organizers for families, homeowners, and small businesses. Each kit is built to be used, not just looked at.</p>
+        <p>We are the team behind a local sign business that has served customers for more than 50 years. Decades of making signs for shops, events, homes, and vehicles taught us what gets noticed and what gets results. That experience goes into every guide, checklist, and planner we make.</p>
+        <p>Every product is an instant digital download in standard US Letter size, so you can print at home or at any print shop. Our kits include clear worksheets and companion files you can use on your computer or print as many times as you need.</p>
+        <p>BrightLaunch is part of Signs OverNITE, a family-owned business based in Crown Point, Indiana, serving Northwest Indiana and the greater Chicagoland area.</p>
+        <p><strong>Contact us:</strong><br>Phone: 219.365.4088<br>Text: 219.213.1379<br>Email: info@signsovernite.com</p>
       </div>`;
       return new Response(wrap("About", body), { headers: { "Content-Type": "text/html" } });
+    }
+
+    if (path === "/contact") {
+      const body = `<div style="max-width:800px;margin:0 auto;padding:32px 20px">
+        <h1>Contact Us</h1>
+        <p>Have a question about a kit or need help with an order? Reach out and we’ll get back to you.</p>
+        <div style="background:white;padding:24px;border-radius:12px;margin-top:20px">
+          <p><strong>BrightLaunch Template Co. / Signs OverNITE</strong></p>
+          <p>Phone: 219.365.4088</p>
+          <p>Text: 219.213.1379</p>
+          <p>Email: info@signsovernite.com</p>
+          <p>Address: 8304 S Cline Ave, Crown Point, IN</p>
+        </div>
+        <p style="margin-top:20px">We typically respond within one business day.</p>
+      </div>`;
+      return new Response(wrap("Contact", body), { headers: { "Content-Type": "text/html" } });
     }
 
     return new Response("Not found", { status: 404 });
