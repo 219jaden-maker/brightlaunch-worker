@@ -95,7 +95,7 @@ Perfect for seniors and caregivers.
 Instant digital download.
 Created by BrightLaunch.
 Digital product only. No physical item will be shipped.` },
-      { id: "teen-savings", name: "Teen Job & College Savings Planner", price: 19.00, img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=600&fit=crop", desc: `Help teens track jobs, income, and college savings in one place.
+      { id: "teen-savings", name: "Teen Job & College Savings Planner", price: 19.00, img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=600&fit=crop", desc: `Help teens track jobs, income, and college savings in one place.
 This planner builds money habits and keeps college goals visible.
 
 What's included:
