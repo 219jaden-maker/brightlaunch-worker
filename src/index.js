@@ -24,6 +24,20 @@ Perfect for parents, homeschool families, teachers, and young book lovers.
 Instant digital download. Open the HTML workbook in your browser to print or save as a PDF. Use the CSV templates in a compatible spreadsheet program.
 Created by GiggleSprout Learning, a BrightLaunch brand.
 Digital product only. No physical item will be shipped.` },
+      { id: "kids-chores", name: "Kids Chore & Allowance Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=600&fit=crop", desc: `Make chores and allowance simple and motivating for kids.
+This tracker helps kids see their responsibilities and rewards in one place.
+
+What's included:
+• Weekly Chore Chart
+• Allowance Tracker
+• Reward Chart
+• Responsibility Checklist
+• Parent Notes Page
+
+Perfect for parents who want a clear chore and allowance system.
+Instant digital download.
+Created by GiggleSprout Learning, a BrightLaunch brand.
+Digital product only. No physical item will be shipped.` },
       { id: "emergency-prep", name: "Emergency Preparedness & Family Safety Planner", price: 19.00, img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&h=600&fit=crop", desc: `Get your family ready before an emergency happens.
 This planner helps you organize contacts, evacuation plans, supply lists, and important documents so everyone knows what to do.
 
@@ -51,6 +65,48 @@ What's included:
 
 Perfect for homeowners and anyone who wants to stay prepared for insurance claims.
 Instant digital download. Print or use in a spreadsheet.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "home-energy", name: "Home Energy Saving & Utility Tracker", price: 19.00, img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=600&fit=crop", desc: `Track energy use and find ways to lower your utility bills.
+This kit helps you monitor electricity, gas, and water so you can spot savings.
+
+What's included:
+• Utility Bill Tracker
+• Energy Saving Checklist
+• Room-by-Room Audit Sheet
+• Savings Goal Planner
+• Monthly Review Page
+
+Perfect for homeowners who want to reduce energy costs.
+Instant digital download.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "senior-wellness", name: "Senior Daily Wellness & Medication Tracker", price: 19.00, img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=600&fit=crop", desc: `A simple daily tracker for medications, appointments, and wellness for seniors.
+Stay organized and share information easily with family or caregivers.
+
+What's included:
+• Medication Schedule
+• Appointment Tracker
+• Daily Wellness Log
+• Doctor Visit Notes
+• Emergency Contact Sheet
+
+Perfect for seniors and caregivers.
+Instant digital download.
+Created by BrightLaunch.
+Digital product only. No physical item will be shipped.` },
+      { id: "teen-savings", name: "Teen Job & College Savings Planner", price: 19.00, img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=600&fit=crop", desc: `Help teens track jobs, income, and college savings in one place.
+This planner builds money habits and keeps college goals visible.
+
+What's included:
+• Job & Income Tracker
+• College Savings Goal Sheet
+• Spending Log
+• Scholarship Idea List
+• Monthly Review Page
+
+Perfect for teens and parents planning for college.
+Instant digital download.
 Created by BrightLaunch.
 Digital product only. No physical item will be shipped.` },
       { id: "home-insurance", name: "Home Inventory & Insurance Tracker", price: 12.99, img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=600&fit=crop", desc: `Keep a complete record of your home and belongings for insurance claims.
