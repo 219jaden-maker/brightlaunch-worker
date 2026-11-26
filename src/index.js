@@ -94,7 +94,7 @@ export default {
       <footer style="background:#fff;padding:32px 24px;text-align:center;color:#6b7280;border-top:1px solid #eee;margin-top:40px">
         <p><strong>BrightLaunch Template Co. / Signs OverNITE</strong></p>
         <p>Phone: 219.365.4088 • Text: 219.213.1379</p>
-        <p>Email: info@signsovernite.com</p>
+        <p>Email: quint@signsovernite.com</p>
         <p style="margin-top:12px">
           <a href="https://signsovernite.com">Signs OverNITE</a> • 
           <a href="https://chromeautoshop.com">Chrome Auto Shop</a> • 
@@ -146,7 +146,7 @@ export default {
       const body = `<div style="max-width:800px;margin:0 auto;padding:32px 20px;text-align:center">
         <h1>Thank You!</h1>
         <p>Your order is confirmed. Check your email for the download link from PayPal.</p>
-        <p>Questions? Call 219.365.4088 or email info@signsovernite.com.</p>
+        <p>Questions? Call 219.365.4088 or email quint@signsovernite.com.</p>
         <a href="/" style="background:#f59e0b;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;margin-top:16px">Back to Shop</a>
       </div>`;
       return new Response(wrap("Thank You", body), { headers: { "Content-Type": "text/html" } });
@@ -175,7 +175,7 @@ export default {
         <p>We are the team behind a local sign business that has served customers for more than 50 years. Decades of making signs for shops, events, homes, and vehicles taught us what gets noticed and what gets results. That experience goes into every guide, checklist, and planner we make.</p>
         <p>Every product is an instant digital download in standard US Letter size, so you can print at home or at any print shop. Our kits include clear worksheets and companion files you can use on your computer or print as many times as you need.</p>
         <p>BrightLaunch is part of Signs OverNITE, a family-owned business based in Crown Point, Indiana, serving Northwest Indiana and the greater Chicagoland area.</p>
-        <p><strong>Contact us:</strong><br>Phone: 219.365.4088<br>Text: 219.213.1379<br>Email: info@signsovernite.com</p>
+        <p><strong>Contact us:</strong><br>Phone: 219.365.4088<br>Text: 219.213.1379<br>Email: quint@signsovernite.com</p>
       </div>`;
       return new Response(wrap("About", body), { headers: { "Content-Type": "text/html" } });
     }
@@ -188,7 +188,7 @@ export default {
           <p><strong>BrightLaunch Template Co. / Signs OverNITE</strong></p>
           <p>Phone: 219.365.4088</p>
           <p>Text: 219.213.1379</p>
-          <p>Email: info@signsovernite.com</p>
+          <p>Email: quint@signsovernite.com</p>
           <p>Address: 8304 S Cline Ave, Crown Point, IN</p>
         </div>
         <p style="margin-top:20px">We typically respond within one business day.</p>
